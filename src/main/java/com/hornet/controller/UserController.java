@@ -25,8 +25,3 @@ public class UserController {
     );
   }
 }
-    return ResponseUtility.send(
-      new SuccessDto(userService.login(userLoginForm))
-    );
-  }
-}

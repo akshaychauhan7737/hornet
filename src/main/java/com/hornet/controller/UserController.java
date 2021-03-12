@@ -1,10 +1,10 @@
-package com.hornet.hornet.controller;
+package com.hornet.controller;
 
-import com.hornet.hornet.common.response.SuccessDto;
-import com.hornet.hornet.forms.UserLoginForm;
-import com.hornet.hornet.services.user.UserDto;
-import com.hornet.hornet.services.user.UserService;
-import com.hornet.hornet.utility.ResponseUtility;
+import com.hornet.common.response.SuccessDto;
+import com.hornet.forms.UserLoginForm;
+import com.hornet.services.user.UserDto;
+import com.hornet.services.user.UserService;
+import com.hornet.utility.ResponseUtility;
 import lombok.NoArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,6 +20,11 @@ public class UserController {
 
   @PostMapping
   public ResponseEntity<UserDto> login(UserLoginForm userLoginForm) {
+    return ResponseUtility.send(
+      new SuccessDto(userService.login(userLoginForm))
+    );
+  }
+}
     return ResponseUtility.send(
       new SuccessDto(userService.login(userLoginForm))
     );

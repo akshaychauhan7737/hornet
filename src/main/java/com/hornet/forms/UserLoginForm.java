@@ -1,4 +1,4 @@
-package com.hornet.hornet.forms;
+package com.hornet.forms;
 
 import lombok.Data;
 

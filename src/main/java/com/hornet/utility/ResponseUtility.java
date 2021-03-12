@@ -1,6 +1,6 @@
-package com.hornet.hornet.utility;
+package com.hornet.utility;
 
-import com.hornet.hornet.common.response.ResponseEnvelop;
+import com.hornet.common.response.ResponseEnvelop;
 import org.springframework.http.ResponseEntity;
 
 public interface ResponseUtility {

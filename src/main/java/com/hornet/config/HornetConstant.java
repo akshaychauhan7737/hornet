@@ -1,4 +1,4 @@
-package com.hornet.hornet.config;
+package com.hornet.config;
 
 public final class HornetConstant {
 

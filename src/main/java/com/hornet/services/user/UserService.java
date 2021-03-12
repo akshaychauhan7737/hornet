@@ -1,6 +1,6 @@
-package com.hornet.hornet.services.user;
+package com.hornet.services.user;
 
-import com.hornet.hornet.forms.UserLoginForm;
+import com.hornet.forms.UserLoginForm;
 import java.util.Optional;
 
 public interface UserService {

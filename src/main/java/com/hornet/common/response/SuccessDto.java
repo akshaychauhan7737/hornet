@@ -1,4 +1,4 @@
-package com.hornet.hornet.common.response;
+package com.hornet.common.response;
 
 import org.springframework.http.HttpStatus;
 

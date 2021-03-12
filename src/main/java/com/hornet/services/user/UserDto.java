@@ -1,4 +1,4 @@
-package com.hornet.hornet.services.user;
+package com.hornet.services.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.UUID;

@@ -1,12 +1,16 @@
 package com.hornet.utility;
 
-import com.hornet.common.response.ResponseEnvelop;
+import com.hornet.common.response.ResponseCodes;
+import com.hornet.common.response.ResponseDto;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 public interface ResponseUtility {
-  static <ResponseStatusDto extends ResponseEnvelop, T> ResponseEntity<T> send(
-    ResponseStatusDto t
-  ) {
-    return new ResponseEntity(t.getBody(), t.getStatus());
+  static <T> ResponseEntity<T> send(ResponseCodes responseCodes, T t) {
+    ResponseDto<T> r = new ResponseDto<T>();
+    r.setMessage(responseCodes.getMessage());
+    r.setStatus(responseCodes.getStatus());
+    r.setData(t);
+    return new ResponseEntity(r, responseCodes.getHttpStatus());
   }
 }
